@@ -1,6 +1,4 @@
-github:
-  is_project_page: false
 theme: jekyll-theme-hacker
-title: ヽ( ◔‿◔)ﾉ
-description: ...
+title:
+description:
 show_downloads: "false"
