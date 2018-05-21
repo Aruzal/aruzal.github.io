@@ -1,28 +1,24 @@
 # Recon
+
 Recon is important 
 
-### DNS
+## Port Scan
 
-### Subdomains
+## DNS
 
-###### Tools
-- subbrute
+## Subdomains
+
+- Subbrute
 - altdns
-- goBuster
 
-### Port Scan
-Port Scans allow you to check what ports are open. Look for port's that aren't usually open. Gives an idea of what services may be running. Increased attack surface.
+## Directory's & Files
 
-### Directory's & Files
-
-###### Common Files
 - robots.txt
 - .git
 - phpinfo.php
 
-###### Tools
-- goBuster
+- GoBuster (https://github.com/OJ/gobuster)
 
-### WordLists
+## WordLists
 
-- seclists
+- Seclists
