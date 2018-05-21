@@ -2,5 +2,5 @@
 
 * [Recon](https://aruzal.github.io/security/recon)
 * Authentication
-* XSS
-* SQLi
+* [XSS](https://aruzal.github.io/security/xss)
+* [SQLi](https://aruzal.github.io/security/sqli)
