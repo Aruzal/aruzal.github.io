@@ -3,6 +3,7 @@
 Recon is important 
 
 ## Port Scan
+Port Scans allow you to check what ports are open. Look for port's that aren't usually open. Gives an idea of what services may be running. Increased attack surface.
 
 ## DNS
 
