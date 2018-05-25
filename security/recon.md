@@ -4,6 +4,13 @@ The first thing you should do when looking at a new target is to perform reconai
 ### DNS and Subdomains
 In many cases you may be provided with a scope consisting of just a domain name. In these cases there may be multiple subdomains for this domain other than the ones publicly available. These subdomains are generally hidden and thus you will have to find them. We want to find these subdomains as each one is another asset and may provide a new application or functionality that increases the attack surface. Most hidden subdomains that aren't publicly available will also generally contain staging or development environments, admin consoles or other applications that aren't meant for general user access.
 
+##### What is a subdomain?
+A subdomain is as the name implies, a subdivision of a larger domain, where a domain is commonly referred to as the website name. 
+e.g. www.google.com
+- www is the subdomain
+- google is the domain name
+- com is the top level domain
+
 ##### DNS and Reverse DNS Lookup
 A reverse IP lookup is when you provide a domain name (with or without a subdomain) and it returns the IP address
 
