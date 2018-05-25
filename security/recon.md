@@ -27,12 +27,12 @@ In many cases the methods above are not enough to find all the subdomains and a 
 
 ##### Brute Force Tools
 - [goBuster](https://github.com/OJ/gobuster) - DNS & Directory/File Brute Force
-- [altdns](https://github.com/infosec-au/altdns) - Subdomain brute force that creates permutations of a given wordlist and attempts to resolve.
+- [altdns](https://github.com/infosec-au/altdns) - Subdomain brute force using permutations of a given wordlist.
 - [subbrute](https://github.com/TheRook/subbrute) - Subdomain brute force tool. 
 - [fierce](https://github.com/mschwager/fierce) - Locates non-contiguous IP spaces and subdomains
 
 ##### Other Resources
-- [DNS Hacking](https://resources.infosecinstitude.com/dns-hacking/)
+- [DNS Hacking](https://resources.infosecinstitute.com/dns-hacking/)
 - [Discovering Subdomains](https://www.bugcrowd.com/discovering-subdomains/)
 
 ### Port Scan
@@ -42,21 +42,17 @@ This is one of the first things you should try when you come across a new IP. It
 [nmap](https://nmap.org) is a tool that allows you to quickly and easily perform a portscan by specifying a domain name or an ip address. Basic usage can be done with `nmap [domain/ip]`. In order to get information about what services may be running on a port use the -sV flag.
 
 ### Application Layout/Funtionality
-
-Spidering
-[Burp Suite](https://portswigger.net/bup)
+One you have discovered a handful subdomains it's time to start exploring their applications. It a good idea to play around with the functionality and get a good idea of how the applications work and what attack surfaces are present. A good idea is to use a tool like [Burp Suite](https://portswigger.net/burp) while you do this as it records your http history by passing requests through a proxy. This allows you to view any hidden requests made by the application, the fields present in forms as well as other information sent by requests or received by responses. Burp also has many other features such a 'spidering' feature which will crawl links on pages of the application to build a map for you.
 
 ### Directory's & Files
-This also includes routes and endpoints for API's
+Sometimes traversing the application or spidering wont expose all of the available files and directories. In this case we can find hidden files by doing a brute force. This also includes routes/endpoints for any API's the application may use. We can also use [goBuster](https://github.com/OJ/gobuster) to brute force directories.
 
 ##### Common Files
-- robots.txt
-- .git
+- robots.txt - Contains hidden routes that developers don't want robots to index in search engines ect.
+- .git - If you manage to find this file then you can essential grab all of the source code.
+	- [DVCS-Pillage](https://github.com/evilpacket/DVCS-Pillage) - Used to build source code from a .git file
+	- [truffleHog](https://github.com/dxa4481/truffleHog) - Used to find high entropy strings, useful for finding keys
 - phpinfo.php
-
-- [goBuster](https://github.com/OJ/gobuster) DNS & Directory/File Brute Force
-- [DVCS-Pillage](https://github.com/evilpacket/DVCS-Pillage)
-- [truffleHog](https://github.com/dxa4481/truffleHog)
 
 ### WordLists
 Word lists are required for all types of brute forcing, however using the correct word list is extremely important as it can increase the hit rate of the brute force as well as decrease the time it takes to complete. It is ideal to use a wordlist that is targeted towards not only the application you are trying to brute force but also the objective of the brute force. 
