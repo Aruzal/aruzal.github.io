@@ -7,20 +7,31 @@ In many cases you may be provided with a scope consisting of just a domain name.
 ##### What is a subdomain?
 A subdomain is as the name implies, a subdivision of a larger domain, where a domain is commonly referred to as the website name. 
 e.g. www.google.com
-- www is the subdomain
-- google is the domain name
-- com is the top level domain
+- 'www' is the subdomain
+- 'google' is the domain name
+- 'com' is the top level domain
 
 ##### DNS and Reverse DNS Lookup
-A reverse IP lookup is when you provide a domain name (with or without a subdomain) and it returns the IP address
+By first using a DNS Lookup we can determine the IP that maps to that domain. We can they perform a reverse DNS lookup to find the domain that maps back to this IP. This will also include any other subdomains that map back onto that same IP or are related to that same IP space.
 
+- DNS Lookup = provide a domain name and the IP mapped to it is returned
+- Reverse DNS Lookup = provide an IP address and domain names mapped to it are returned
+
+##### Online Tools
 - [yougetsignal](https://www.yougetsignal.com/tools/web-sites-on-web-server/)
+- [dnsDumpster](https://dnsdumpster.com)
+- [pentest-tools](https://pentest-tools.com/information-gathering/find-subdomains-of-domain)
 
 ##### Subdomain Brute Force
-In 
+In many cases the methods above are not enough to find all the subdomains and a brute force may be required. There are many tools our there that allow subdomain bruteforcing such as the ones below. It is often best to chain some of the tools. For example using gobuster to bruteforce subdomains and then using altdns to find permutations of those subdomains that are slightly more obscure and might not come up in a generic word list.
 
-#### Other Resources
+##### Brute Force Tools
+- [goBuster](https://github.com/OJ/gobuster) - DNS & Directory/File Brute Force
+- [altdns](https://github.com/infosec-au/altdns) - Subdomain brute force that creates permutations of a given wordlist and attempts to resolve.
+- [subbrute](https://github.com/TheRook/subbrute) - Subdomain brute force tool. 
+- [fierce](https://github.com/mschwager/fierce) - Locates non-contiguous IP spaces and subdomains
 
+##### Other Resources
 - [DNS Hacking](https://resources.infosecinstitude.com/dns-hacking/)
 - [Discovering Subdomains](https://www.bugcrowd.com/discovering-subdomains/)
 
@@ -33,6 +44,7 @@ This is one of the first things you should try when you come across a new IP. It
 ### Application Layout/Funtionality
 
 Spidering
+[Burp Suite](https://portswigger.net/bup)
 
 ### Directory's & Files
 This also includes routes and endpoints for API's
@@ -42,8 +54,9 @@ This also includes routes and endpoints for API's
 - .git
 - phpinfo.php
 
-[DVCS-Pillage](https://github.com/evilpacket/DVCS-Pillage)
-[truffleHog](https://github.com/dxa4481/truffleHog)
+- [goBuster](https://github.com/OJ/gobuster) DNS & Directory/File Brute Force
+- [DVCS-Pillage](https://github.com/evilpacket/DVCS-Pillage)
+- [truffleHog](https://github.com/dxa4481/truffleHog)
 
 ### WordLists
 Word lists are required for all types of brute forcing, however using the correct word list is extremely important as it can increase the hit rate of the brute force as well as decrease the time it takes to complete. It is ideal to use a wordlist that is targeted towards not only the application you are trying to brute force but also the objective of the brute force. 
@@ -51,10 +64,3 @@ Word lists are required for all types of brute forcing, however using the correc
 For example when brute forcing files and directories it would be preferred to include common files and routes in the word list. This is also the same for credentials, it is common sense to try the most common passwords as this increases your chance of being successful.
 
 [Seclists](https://github.com/danielmiessler/SecLists) is a repository that contains multiple wordlists each with their own specific target use. While word lists like this are extremely useful, you should also update and include additional words into these lists so that the list are better suited to your target.
-
-### Links to Tools
-- [goBuster](https://github.com/OJ/gobuster) DNS & Directory/File Brute Force
-- [Burp Suite](https://portswigger.net/bup)
-- [subbrute]() - Subdomain brute force tool. 
-- [altdns]() - Subdomain brute force using permutions of a given wordlist.
-- [goBuster](https://github.com/OJ/gobuster) - DNS & Directory/File Brute Force
