@@ -15,6 +15,7 @@ In
 #### Other Resources
 
 - [DNS Hacking](https://resources.infosecinstitude.com/dns-hacking/)
+- [Discovering Subdomains](https://www.bugcrowd.com/discovering-subdomains/)
 
 ### Port Scan
 This is one of the first things you should try when you come across a new IP. It will allow you to check what ports are open which can give you a good idea of what other services may be running. This is great as some services may already have known vulnerabilities. This will also let you increase the attack surface you have access to as browsers generally only use http/https. 
@@ -38,7 +39,11 @@ This also includes routes and endpoints for API's
 [truffleHog](https://github.com/dxa4481/truffleHog)
 
 ### WordLists
-Word lists are required for all types of brute forcing, however using the correct word list is extremely important as it can increase the hit rate of the brute force as well as decrease the time it takes to complete. It is ideal to use a wordlist that is targeted towards not only the application you are trying to brute force but also the objective of the brute force. For example when brute forcing files and directories it would be preferred to include common files and routes in the word list. This is also the same for credentials, it is common sense to try the most common passwords as this increases your chance of being successful. [Seclists](https://github.com/danielmiessler/SecLists) is a repository that contains multiple wordlists each with their own specific target use. While word lists like this are extremely useful, you should also update and include additional words into these lists so that the list are better suited to your target. There is a tool called []() which allows you to scrape a webpage and build your own word list from important words contained on that page. 
+Word lists are required for all types of brute forcing, however using the correct word list is extremely important as it can increase the hit rate of the brute force as well as decrease the time it takes to complete. It is ideal to use a wordlist that is targeted towards not only the application you are trying to brute force but also the objective of the brute force. 
+
+For example when brute forcing files and directories it would be preferred to include common files and routes in the word list. This is also the same for credentials, it is common sense to try the most common passwords as this increases your chance of being successful.
+
+[Seclists](https://github.com/danielmiessler/SecLists) is a repository that contains multiple wordlists each with their own specific target use. While word lists like this are extremely useful, you should also update and include additional words into these lists so that the list are better suited to your target.
 
 ### Links to Tools
 - [goBuster](https://github.com/OJ/gobuster) DNS & Directory/File Brute Force
