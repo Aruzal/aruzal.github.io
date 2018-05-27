@@ -7,6 +7,7 @@ XSS is a client side vulnerability that targets users by injecting client-side s
 
 ##### Reflected XSS
 Reflected XSS occurs when an input field or URL parameter is reflected back onto the page. A common example of this is a searched phrase being display on the search results page. In this case an attacker may send a link to a victim where the search query is an xss payload.
+
 `www.website.com/?search=<script>{xss_payload}</script>`
 
 ##### Stored XSS
@@ -24,8 +25,9 @@ Filtering techniques...
 ### CSRF
 CSRF stands for Cross-Site-Request-Forgery and is a type of attack that targets authenticated users where the attacker gets the user to make a malicious request on their behalf. Since the user is authenticated and is the one making the request it is seen as valid by the server. This can be done by getting the user to visit a malicious page that makes the request using the cookie for the targeted site. However this is not always possible as sometimes web applcations use Same Origin Policy and CSRF tokens to prevent this attack. However if you mange to find an XSS within the web application itself then you can bypass both of these prevention techniques.
 
-###### Same Origin Policy
+##### Same Origin Policy
 Same Origin Policy is a header field that specifies what content is allowed to render on the page. It is important as it mitigates the impact of XSS as scripts will now no longer run or make calls to URL's not belonging to the same domain the web application is hosted on. This makes it impossible for users to steal credentials through XSS as well ruling out some filtering techniques. It is important to realise that XSS is still possible if you can inject a script into the web application and perform a CSRF attack.
 
 ### Other Resources
-- [XSS Shortening Cheatsheet](https://labs.neohapsis.com/2012/04/19/xss-shortening-cheatsheet)
+- [XSS Shortening Cheatsheet](https://labs.neohapsis.com/2012/04/19/xss-shortening-cheatsheet) 
+- [XSS Hunter](https://xsshunter.com/) - Tool for collecting hits from xss payloads

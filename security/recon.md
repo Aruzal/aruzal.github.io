@@ -60,3 +60,5 @@ Word lists are required for all types of brute forcing, however using the correc
 For example when brute forcing files and directories it would be preferred to include common files and routes in the word list. This is also the same for credentials, it is common sense to try the most common passwords as this increases your chance of being successful.
 
 [Seclists](https://github.com/danielmiessler/SecLists) is a repository that contains multiple wordlists each with their own specific target use. While word lists like this are extremely useful, you should also update and include additional words into these lists so that the list are better suited to your target.
+
+You may also try to create your own word lists. [CeWL](https://github.com/digininja/CeWL) is a tool that scrapes words off a webpage and creates a word list for you. This may be useful as it will add words that are targetted toward that domain.
