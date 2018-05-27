@@ -39,7 +39,7 @@ Knowing what kind of database you are dealing with can be extremely useful. Many
 
 `SELECT table_name FROM information_schema.tables`
 
-[MySQL Cheat Sheet](pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet)
+[MySQL Cheat Sheet](http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet)
 
 ### Tools
 [SQLMap](https://github.com/sqlmapproject/sqlmap) - SQLMap is an automated tool that attempts to inject payloads from a large repository until it finds one that executes for you.

