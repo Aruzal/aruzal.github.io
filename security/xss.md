@@ -22,7 +22,13 @@ XSS can potentially occur wherever there is user controlled input.
 - URL Paramaters or Just in the URL in general
 
 ### XSS Filtering
-Filtering techniques...
+Sometimes simple XSS payload wont work as applications use filtering techniques in an attempt to prevent XSS. When this occurs it is important to be creative as in most cases XSS can be work. There are a couple of techniques to consider and try.
+
+- Try URL encoding the symbols so that `<script>` becomes `&lt;script&gt;` 
+- You can also use other HTMl tags other than script, such as `<img src="javascript:{payload};">`
+- On error is also another place you can try as it isn't always considered and javascript can just run without being specified `<img scr=nothing onerror="{javascript_xss_payload">`
+
+##### Other Resources
 - [XSS Filter Evasion Cheat Sheet](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet)
 - [XSS Shortening Cheatsheet](https://labs.neohapsis.com/2012/04/19/xss-shortening-cheatsheet) 
 
